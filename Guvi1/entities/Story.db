@@ -1,0 +1,86 @@
+{
+  "name": "Story",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Generated story title"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "Original user prompt"
+    },
+    "genre": {
+      "type": "string",
+      "enum": [
+        "fantasy",
+        "adventure",
+        "mystery",
+        "romance",
+        "sci-fi",
+        "horror",
+        "comedy",
+        "drama"
+      ],
+      "description": "Story genre"
+    },
+    "tone": {
+      "type": "string",
+      "enum": [
+        "lighthearted",
+        "serious",
+        "whimsical",
+        "dark",
+        "inspiring",
+        "humorous"
+      ],
+      "description": "Story tone"
+    },
+    "target_audience": {
+      "type": "string",
+      "enum": [
+        "children",
+        "young_adult",
+        "adult",
+        "all_ages"
+      ],
+      "description": "Target audience"
+    },
+    "mood_emoji": {
+      "type": "string",
+      "description": "Emoji representing story mood"
+    },
+    "art_style": {
+      "type": "string",
+      "enum": [
+        "cartoon",
+        "anime",
+        "watercolor",
+        "realistic",
+        "digital_art"
+      ],
+      "description": "Visual art style for images"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "generating",
+        "completed",
+        "error"
+      ],
+      "default": "generating",
+      "description": "Story generation status"
+    },
+    "scenes_count": {
+      "type": "number",
+      "default": 5,
+      "description": "Number of scenes in the story"
+    }
+  },
+  "required": [
+    "prompt",
+    "genre",
+    "tone",
+    "target_audience"
+  ]
+}

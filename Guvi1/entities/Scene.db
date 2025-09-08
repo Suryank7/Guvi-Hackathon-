@@ -1,0 +1,45 @@
+{
+  "name": "Scene",
+  "type": "object",
+  "properties": {
+    "story_id": {
+      "type": "string",
+      "description": "ID of the parent story"
+    },
+    "scene_number": {
+      "type": "number",
+      "description": "Order of the scene in the story"
+    },
+    "title": {
+      "type": "string",
+      "description": "Scene title"
+    },
+    "text": {
+      "type": "string",
+      "description": "Scene text content"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Generated image URL for the scene"
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "Prompt used to generate the image"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "generating",
+        "completed",
+        "error"
+      ],
+      "default": "generating",
+      "description": "Scene generation status"
+    }
+  },
+  "required": [
+    "story_id",
+    "scene_number",
+    "text"
+  ]
+}

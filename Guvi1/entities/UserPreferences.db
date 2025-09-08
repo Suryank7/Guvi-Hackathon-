@@ -1,0 +1,39 @@
+{
+  "name": "UserPreferences",
+  "type": "object",
+  "properties": {
+    "favorite_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User's favorite genres"
+    },
+    "preferred_tone": {
+      "type": "string",
+      "description": "User's preferred story tone"
+    },
+    "preferred_art_style": {
+      "type": "string",
+      "description": "User's preferred art style"
+    },
+    "default_audience": {
+      "type": "string",
+      "description": "User's default target audience"
+    },
+    "completed_stories": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of stories user has completed"
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "User achievements and badges"
+    }
+  },
+  "required": []
+}
